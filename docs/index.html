@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- iHelp247 WP Fan Mail - (c) ULXI - UnLimited eXchange, Inc. - published under the iHelp247 brand - https://ihelp247.com - GPL-2.0-or-later -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iHelp247 WP Fan Mail — User Guide &amp; Support</title>
+<style>
+  :root { --ink:#1d2327; --soft:#50575e; --line:#dcdcde; --accent:#2271b1; --bg:#f6f7f7; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  header { background:#000510; color:#fff; padding:40px 20px; text-align:center; }
+  header h1 { margin:0 0 6px; font-weight:500; letter-spacing:1px; }
+  header p { margin:0; color:rgba(255,255,255,0.7); }
+  nav { background:#fff; border-bottom:1px solid var(--line); padding:10px 20px; text-align:center; position:sticky; top:0; }
+  nav a { color:var(--accent); text-decoration:none; margin:0 12px; font-size:14px; }
+  main { max-width:860px; margin:0 auto; padding:30px 20px 60px; }
+  section { background:#fff; border:1px solid var(--line); border-radius:6px; padding:24px 28px; margin-bottom:24px; }
+  h2 { margin-top:0; font-size:22px; }
+  h3 { font-size:16px; margin-bottom:6px; }
+  code { background:var(--bg); border:1px solid var(--line); border-radius:3px; padding:1px 6px; font-size:0.92em; }
+  .q { font-weight:600; margin:18px 0 4px; }
+  .a { margin:0 0 4px; color:var(--soft); }
+  .tip { border-left:3px solid var(--accent); padding:8px 14px; background:#f0f6fb; margin:14px 0; border-radius:0 4px 4px 0; }
+  footer { text-align:center; color:var(--soft); font-size:13px; padding:20px; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>iHelp247 WP Fan Mail</h1>
+  <p>A contact form for WordPress — fan mail for your site, easy by default, powerful when you need it.<br><small>An iHelp247 project — by ULXI</small></p>
+</header>
+
+<nav>
+  <a href="#start">Getting started</a>
+  <a href="#forms">Forms</a>
+  <a href="#inbox">Inbox</a>
+  <a href="#delivery">Email delivery</a>
+  <a href="#privacy">Privacy</a>
+  <a href="#advanced">Advanced</a>
+  <a href="#help">Self-diagnosis</a>
+  <a href="#remove">Removing</a>
+</nav>
+
+<main>
+
+<section id="start">
+  <h2>Getting started (two minutes)</h2>
+  <p>Install and activate the plugin. A form named <strong>Contact</strong> is ready the moment you do. Put it on any page by typing <code>[fan-mail]</code> where you want it (in the block editor, a Shortcode block works; the classic editor takes it as plain text). Save, open the page, send yourself a message.</p>
+  <p>Your message shows up in <strong>two places</strong>: under <strong>Fan Mail → Inbox</strong> in your WordPress admin (always), and as an email to your site's admin address (as long as your site can send mail — see <a href="#delivery">Email delivery</a>). The Inbox is the one you can trust unconditionally: messages are saved there <em>before</em> any emailing is attempted, so a broken mail setup never loses a message.</p>
+  <div class="tip">Replying is just pressing <strong>Reply</strong> in your own email program — the notification carries the visitor's address in Reply-To. Or open the message in the Inbox and press <strong>Reply by email</strong>.</div>
+</section>
+
+<section id="forms">
+  <h2>Forms — name them in plain words</h2>
+  <p>Under <strong>Fan Mail → Forms</strong> you can edit the Contact form or add more — a Support form, a Bookings form, a "Say hello" form. Each form takes its handle from its name: the form you call <em>Say hello</em> answers to <code>[fan-mail form="say-hello"]</code> in pages and <code>{fan-mail-say-hello}</code> in raw HTML. No numbers to remember, ever.</p>
+  <h3>The editor</h3>
+  <p>Simple controls on the left, a <strong>live preview</strong> on the right — with a Light page / Dark page toggle so you can see the form on both kinds of background before saving. You choose: an intro line, the fields (see below), the button label, the thank-you message, who gets notified (one or more email addresses; empty means the site admin), and the look.</p>
+  <h3>Fields — all of them yours</h3>
+  <p>Nothing on a Fan Mail form is baked in. Every field — including the classics — is a row in one list: press <strong>+ Add a field</strong>, give it a label, pick a type, mark it required if you like, tint it with its own color if you like, reorder with ▲▼. Five types are <strong>smart</strong>: <strong>Email</strong> makes the form replyable and checks itself as visitors type, <strong>Phone</strong> auto-heals numbers to international +format, <strong>Subject</strong> becomes the notification email's title, <strong>Message</strong> is the big text box, and <strong>Name</strong> feeds your contact records — most forms want at least Email and Message. The rest are the building blocks of quote-request, booking, survey, and feedback forms: a <strong>dropdown</strong> or <strong>multiple choice</strong> ("What's this about?"), a <strong>checkbox</strong> ("Send me the newsletter"), a <strong>number</strong> ("How many guests?"), a <strong>date</strong>, a <strong>website URL</strong>, a <strong>star rating</strong>, a <strong>paragraph</strong>, or plain <strong>short text</strong>. Dropdown and multiple-choice take one choice per line. Every answer is saved with the message in your Inbox, included in the notification email, and exported in the CSV. A form needs at least one field to save; your Contact form comes prepopulated with the classic four, and forms you create start empty — entirely your build.</p>
+  <h3>Surveys &amp; questionnaires</h3>
+  <p>Three types built for feedback: <strong>Checkboxes</strong> (pick all that apply), a <strong>Likert scale</strong> (the agree–disagree row; edit the five labels via the options box, or leave it for the standard Strongly disagree → Strongly agree), and <strong>NPS</strong> ("how likely are you to recommend us?" — a 0–10 button row). Any field can also switch on <strong>notes</strong>: a small optional "Anything to add?" box underneath, for answers that need a sentence of explanation.</p>
+  <h3>Show a field only when… (conditionals)</h3>
+  <p>Each field row ends with a <strong>Show:</strong> control. "Always" is the default; pick <em>when "Attending?" is Yes</em> and the field appears only after that answer is given. Rules follow fields around — rename or reorder freely. Visitors without JavaScript simply see every field; nothing breaks.</p>
+  <h3>Address &amp; ZIP lookup</h3>
+  <p>The <strong>Address</strong> field renders street, city, state, and ZIP together. When a visitor types a ZIP, your <em>server</em> looks up the city and state (free service, cached) and fills them in — their browser never contacts anyone but your site, keeping the no-beacons promise. ZIP format is checked as they type and again on the server.</p>
+  <h3>File uploads</h3>
+  <p>The <strong>File upload</strong> field accepts images and PDFs (jpg, jpeg, png, gif, webp, heic, pdf) up to the size you set under Settings → Uploads. Files are checked by their actual content — a renamed .exe doesn't get in — stored with unguessable names in your uploads folder, linked from the Inbox and the notification email, and deleted whenever their message is deleted (including auto-retention and privacy erasures).</p>
+  <h3>The look</h3>
+  <p>Accent color and a light/dark/auto theme, plus three overrides: <strong>card background</strong> (follow the theme, a custom color, or <em>transparent</em> — nothing behind the fields, so the page's own background shows through, which is exactly right on an Intermission page or a styled section), <strong>field background</strong> color, and <strong>text color</strong>. When you pick custom colors, check the preview against both the Light and Dark page buttons.</p>
+  <h3>Consent checkbox</h3>
+  <p>Tick <strong>Ask visitors to agree before sending</strong> and the form shows a consent checkbox with wording you can edit. Visitors must tick it to send — a friendly, GDPR-shaped default when you want it.</p>
+  <h3>On a maintenance page (WP Intermission)</h3>
+  <p>If you also run <a href="https://github.com/iHelp247/wp-intermission">iHelp247 WP Intermission</a>, drop <code>{fan-mail-contact}</code> into its custom HTML (or template content) and visitors can write to you while the site is backstage. Set the form's theme to <strong>Dark</strong> and it sits naturally on the stock Intermission backdrop. Sending works during maintenance — that's by design in both plugins.</p>
+</section>
+
+<section id="inbox">
+  <h2>The Inbox — your messages, your database</h2>
+  <p><strong>Fan Mail → Inbox</strong> lists every message: who wrote, what they said, which form they used, when, and whether the email copy went out (a green ✓ or a red ✗ with the reason). Unread messages are bold, and the Fan Mail menu shows an unread-count badge just like Comments.</p>
+  <p>Open a message to read it in full, see the sender's history (how many messages, since when), reply by email, mark it unread or replied, or delete it. The list has search, per-form and per-status filters, and bulk actions.</p>
+  <h3>CSV export</h3>
+  <p>The <strong>Export CSV</strong> button at the top of the Inbox downloads everything — names, emails, phones, messages, dates, consent — as a spreadsheet-ready file. Handy for backups, or for importing into a CRM or mailing tool you already use.</p>
+</section>
+
+<section id="delivery">
+  <h2>Email delivery — and the spam-folder problem</h2>
+  <p>A contact form has two halves. Storing the message (this plugin's database) always works. Emailing you a copy involves the internet's spam defenses, and that's where contact forms classically go wrong. Fan Mail gives you two carriers in this release:</p>
+  <h3>WordPress mail (wp_mail) — the default</h3>
+  <p>Zero setup: notifications go out however your site already sends email. On good hosting with proper DNS this is fine. On shared hosting it often is not — mail leaves from an address the host can't prove it owns, and receiving servers file it under spam or drop it silently.</p>
+  <h3>SendGrid — the easy fix</h3>
+  <p>SendGrid is a mail service with a free tier that solves this properly. The ten-minute version: create a SendGrid account, verify a <strong>single sender</strong> (an email address you own — SendGrid sends you a confirmation link), create an <strong>API key</strong> under Settings → API Keys (the "Mail Send" permission is enough), then in <strong>Fan Mail → Settings</strong> choose SendGrid, paste the key, set the From address to the verified one, and press <strong>Send a test email to me</strong>. Green message = done.</p>
+  <div class="tip">Whatever the email copy does, the message itself is already safe in your Inbox. A red ✗ in the Inbox means only the courtesy email failed — nothing was lost.</div>
+  <h3>If you want to fix wp_mail instead</h3>
+  <p>Set the From address (Fan Mail → Settings) to an address on your own domain, and ask your host about <strong>SPF</strong> and <strong>DKIM</strong> records for your domain — two DNS entries that tell the world your server is allowed to send your mail. That's the whole trick behind every "why is my mail in spam" article.</p>
+  <p><em>Roadmap:</em> SMTP, Microsoft 365, and Google connectors are planned — the carrier system was built for them.</p>
+</section>
+
+<section id="privacy">
+  <h2>Privacy — minimal, transparent, yours</h2>
+  <p>Messages people send you are personal data, so Fan Mail keeps its footprint deliberately small: submissions live in <strong>your</strong> site's database and go to <strong>your</strong> mailbox. Nothing is ever transmitted to iHelp247 — no analytics, no beacons, no phoning home.</p>
+  <p>Your choices, all under Fan Mail → Settings: IP-address storage is <strong>off by default</strong> (spam protection works without it); auto-delete can clear messages older than a number of days you pick; and the per-form consent checkbox puts agreement in writing. WordPress's built-in privacy tools (Tools → Export Personal Data / Erase Personal Data) know about Fan Mail automatically — enter an email address and its messages are included.</p>
+  <p>Anti-spam works without third-party services: a hidden trap field bots can't resist, a timing check (real people don't fill a form in under three seconds), and a limit on how many messages one address can fire off in ten minutes.</p>
+</section>
+
+<section id="advanced">
+  <h2>Advanced (for power users — safely ignorable)</h2>
+  <h3>Custom CSS per form</h3>
+  <p>The form editor's <strong>Under the hood</strong> section takes CSS that ships with that one form. Every element carries a stable class — <code>.ihfm-wrap</code>, <code>.ihfm-row</code>, <code>.ihfm-submit</code>, and so on — so restyling is ordinary CSS, no fighting.</p>
+  <h3>Developers</h3>
+  <p>Filters: <code>ihelp247_wp_fan_mail_carriers</code> (add delivery carriers), <code>ihelp247_wp_fan_mail_form_html</code> (replace or wrap the rendered form), <code>ihelp247_wp_fan_mail_recipients</code>, <code>ihelp247_wp_fan_mail_docs_url</code>. Action: <code>ihelp247_wp_fan_mail_after_submit</code> (message ID, form, visitor, mail result — wire up Slack pings, CRMs, autoresponders). All tunables are constants at the top of the main plugin file. The SendGrid key can live in <code>wp-config.php</code> as <code>IH247_WPFM_SENDGRID_KEY</code> instead of the database. Updates arrive from GitHub Releases through the normal Plugins screen.</p>
+  <h3>Why there's no nonce on the form (a feature, not an oversight)</h3>
+  <p>Page caches (host-level nginx caches, Cloudflare, caching plugins) can serve the same copy of a page for days. A form protected by a WordPress nonce silently breaks when that happens — the nonce expires and every submission fails with a "session expired" nobody understands. Fan Mail signs the form with a stamp that stays valid for a week instead, so cached pages keep working. Bots are handled by the trap field, the timing check, and rate limiting.</p>
+  <h3>The corner credit</h3>
+  <p>Forms carry a small "fan mail by iHelp247" link. Don't want it? Tick the checkbox at the bottom of the settings page and it's gone — free either way; the link just helps others find the plugin. And if Fan Mail is earning its keep, the buttons next to that checkbox are how you tell us to keep building: a review, or an energy drink — any amount, one-time or monthly, chosen at checkout (opens in a new tab), straight to feeding the developers' break room.</p>
+</section>
+
+<section id="help">
+  <h2>Self-diagnosis — when something looks wrong</h2>
+
+  <p class="q">"I put the shortcode on a page but I just see the text [fan-mail]."</p>
+  <p class="a">The page builder printed it as plain text instead of running it. In the block editor use a <strong>Shortcode</strong> block. Some page builders have their own shortcode element — use that. In raw-HTML contexts use the token form, <code>{fan-mail-contact}</code>, instead.</p>
+
+  <p class="q">"The form shows, but nothing arrives by email."</p>
+  <p class="a">First check <strong>Fan Mail → Inbox</strong> — if the message is there, the form works and only delivery needs attention (that's what the red ✗ tooltip tells you). Then read <a href="#delivery">Email delivery</a> above: test send, From address on your domain, or switch to SendGrid.</p>
+
+  <p class="q">"The test said it was sent, but it never arrived."</p>
+  <p class="a">Two classic causes. (1) You changed the delivery settings but didn't press <strong>Save Changes</strong> — the test uses the last <em>saved</em> settings, and the page now warns you when that's the case. (2) You're on wp_mail: "handed to wp_mail" only means <em>your server accepted the message</em> — the internet can still refuse it further along, silently. That's the wp_mail trap, and the fix is the SendGrid walk-through above (or SPF/DKIM records for your domain). Failures now show the mail system's actual reason next to the red ✗ in the Inbox and in the test result.</p>
+
+  <p class="q">"SendGrid test says 401 or 403."</p>
+  <p class="a">401: the API key is wrong or was deleted — make a fresh one with Mail Send permission. 403: usually the From address isn't a verified sender in SendGrid yet — verify it (Settings → Sender Authentication) and try again.</p>
+
+  <p class="q">"Visitors say the form tells them to reload the page."</p>
+  <p class="a">A cache served them a copy of the page older than a week (the anti-spam stamp's limit). Purge your page cache; consider excluding the contact page from caching or lowering its cache lifetime. Reloading once fixes it for that visitor either way.</p>
+
+  <p class="q">"A real person's message was rejected as 'too fast'."</p>
+  <p class="a">They submitted within three seconds of the page loading — rare for humans, typical for bots. Sending again works. If it keeps happening (e.g. autofill users), the threshold is a constant at the top of the plugin file.</p>
+
+  <p class="q">"I'm getting spam anyway."</p>
+  <p class="a">The honeypot, timing, and rate limits stop the crude flood, not a determined human or a smart bot. Delete offenders from the Inbox (their address is rate-limited automatically if they flood). CAPTCHA integrations are on the roadmap as an opt-in; we won't add third-party beacons by default.</p>
+
+  <p class="q">"The Inbox badge shows a number but the Inbox looks empty."</p>
+  <p class="a">A filter is probably active — press Filter with "All forms" and "All statuses" selected, and clear the search box.</p>
+
+  <p class="q">"I deleted a form by accident."</p>
+  <p class="a">The form's settings are gone (recreate it under the same name and its shortcode/token work again — same slug, same places). Messages already received were <em>not</em> deleted; they stay in the Inbox.</p>
+</section>
+
+<section id="remove">
+  <h2>Removing the plugin</h2>
+  <p>Deactivate and delete under Plugins, like any plugin. By default your messages and contacts <strong>stay in the database</strong> — your data outlives the plugin, and reinstalling later finds everything where it was. If you want a true clean sweep, tick <strong>"Also delete all messages and contacts when the plugin is uninstalled"</strong> under Fan Mail → Settings <em>before</em> uninstalling (consider an Export CSV first).</p>
+</section>
+
+</main>
+
+<footer>
+  <p>iHelp247 WP Fan Mail · published by iHelp247 — by <a href="https://ulxi.com">ULXI, UnLimited eXchange, Inc.</a> · GPL-2.0-or-later<br>
+  Support: <a href="https://ihelp247.com/support">ihelp247.com/support</a> · Source &amp; releases: <a href="https://github.com/iHelp247/wp-fan-mail">github.com/iHelp247/wp-fan-mail</a></p>
+</footer>
+
+</body>
+</html>
